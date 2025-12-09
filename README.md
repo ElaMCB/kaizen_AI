@@ -1,7 +1,8 @@
 # Kaizen AI: The Art of Incremental Excellence
 
 > *"My mindset and life philosophy"*  
-> Applying continuous improvement principles to AI development, testing, and reliability.
+> Applying continuous improvement principles to AI development, testing, and reliability.  
+> *Quality, refined daily.*
 
 ---
 
@@ -32,6 +33,20 @@ Most AI projects fail not because of algorithm complexity, but due to **lack of 
 - **Long-term metrics tracking** for sustained performance
 
 This approach draws from proven quality practices, adapted for modern AI challenges like model drift, non-determinism, and edge-case fragility.
+
+---
+
+## The Way of Quality
+
+*Each detail matters. Each imperfection is a teacher. Each day is an opportunity to refine. This is how we build—with exquisite attention, translated for our time.*
+
+**Shokunin** (職人): The craftsman's spirit. Not perfection, but the relentless pursuit of mastery. In AI, this means every test case, every validation, every metric is crafted with intention. Quality is not a feature—it is the foundation.
+
+**Monozukuri** (ものづくり): The art of making things. Not just building, but understanding the essence of what you create. In our work, this means seeing beyond the algorithm to the system, beyond the code to the experience, beyond the model to the trust it must earn.
+
+**The principle**: Quality is invisible when done well. It reveals itself not in grand gestures, but in the absence of failures, in the confidence of deployment, in the trust of those who depend on your work.
+
+*Applied simply: Build with care. Test with rigor. Improve continuously. The rest follows.*
 
 ---
 
@@ -146,4 +161,4 @@ Suggestions for kaizen-style improvements are welcome—open issues or PRs with 
 
 ---
 
-*Built with the belief that every small improvement compounds into extraordinary results.*
+*Built with the belief that every small improvement compounds into extraordinary results. In the tradition of those who came before—craftsmen who understood that excellence is not achieved, but practiced daily.*

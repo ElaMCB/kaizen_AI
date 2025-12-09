@@ -160,16 +160,60 @@
             this.challenges = [
                 {
                     question: "What's one small improvement you can make to your code today?",
-                    type: "reflection"
+                    type: "reflection",
+                    icon: "💡",
+                    color: "#2d5aa0"
                 },
                 {
                     question: "Which area needs more test coverage?",
-                    type: "quality"
+                    type: "quality",
+                    icon: "🧪",
+                    color: "#4CAF50"
                 },
                 {
                     question: "What's one thing you'd refactor if you had 15 minutes?",
-                    type: "improvement"
+                    type: "improvement",
+                    icon: "🔧",
+                    color: "#FF9800"
+                },
+                {
+                    question: "What's one AI model behavior you'd like to improve?",
+                    type: "ai",
+                    icon: "🤖",
+                    color: "#9C27B0"
+                },
+                {
+                    question: "What edge case should you test for next?",
+                    type: "testing",
+                    icon: "🎯",
+                    color: "#F44336"
+                },
+                {
+                    question: "What documentation could be clearer?",
+                    type: "docs",
+                    icon: "📝",
+                    color: "#2196F3"
+                },
+                {
+                    question: "What performance bottleneck can you optimize?",
+                    type: "performance",
+                    icon: "⚡",
+                    color: "#FFC107"
+                },
+                {
+                    question: "What error handling could be more robust?",
+                    type: "reliability",
+                    icon: "🛡️",
+                    color: "#00BCD4"
                 }
+            ];
+            this.quickActions = [
+                { text: "Add a test case", icon: "✓" },
+                { text: "Improve error handling", icon: "✓" },
+                { text: "Refactor one function", icon: "✓" },
+                { text: "Update documentation", icon: "✓" },
+                { text: "Optimize performance", icon: "✓" },
+                { text: "Fix a bug", icon: "✓" }
             ];
         }
 
@@ -179,22 +223,110 @@
 
             const challenge = this.challenges[Math.floor(Math.random() * this.challenges.length)];
             challengeEl.innerHTML = `
-                <div class="challenge-content">
-                    <h4>Today's Kaizen Challenge</h4>
-                    <p>${challenge.question}</p>
-                    <textarea id="challenge-response" placeholder="Share your improvement idea..."></textarea>
-                    <button class="challenge-submit" onclick="window.kaizenApp.submitChallenge()">Commit to Improvement</button>
+                <div class="challenge-content" style="border-color: ${challenge.color}">
+                    <div class="challenge-header">
+                        <span class="challenge-icon">${challenge.icon}</span>
+                        <div>
+                            <h4>Today's Kaizen Challenge</h4>
+                            <p class="challenge-type">${challenge.type.charAt(0).toUpperCase() + challenge.type.slice(1)} Focus</p>
+                        </div>
+                    </div>
+                    <div class="challenge-question">
+                        <p>${challenge.question}</p>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <p class="quick-actions-label">Quick actions (click to add):</p>
+                        <div class="quick-actions-grid">
+                            ${this.quickActions.map(action => `
+                                <button class="quick-action-btn" onclick="window.kaizenApp.addQuickAction('${action.text}')">
+                                    <span class="quick-icon">${action.icon}</span>
+                                    ${action.text}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <textarea id="challenge-response" placeholder="Describe your improvement idea or commit..."></textarea>
+                    <div class="challenge-footer">
+                        <button class="challenge-submit" onclick="window.kaizenApp.submitChallenge()">
+                            <span>✨ Commit to Improvement</span>
+                        </button>
+                        <button class="challenge-skip" onclick="window.kaizenApp.skipChallenge()">
+                            Get New Challenge
+                        </button>
+                    </div>
                 </div>
             `;
+        }
+
+        addQuickAction(text) {
+            const textarea = document.getElementById('challenge-response');
+            if (textarea) {
+                const current = textarea.value.trim();
+                const newText = current ? `${current}\n• ${text}` : `• ${text}`;
+                textarea.value = newText;
+                textarea.focus();
+                
+                // Visual feedback
+                const buttons = document.querySelectorAll('.quick-action-btn');
+                buttons.forEach(btn => {
+                    if (btn.textContent.includes(text)) {
+                        btn.classList.add('clicked');
+                        setTimeout(() => btn.classList.remove('clicked'), 300);
+                    }
+                });
+            }
         }
 
         submitChallenge() {
             const response = document.getElementById('challenge-response')?.value;
             if (response && response.trim()) {
-                alert('🎉 Great! You\'ve committed to continuous improvement. Every small step counts!');
-                document.getElementById('challenge-response').value = '';
+                // Show success animation
+                const challengeEl = document.getElementById('kaizen-challenge');
+                challengeEl.classList.add('success-animation');
+                
+                // Create success message
+                const successMsg = document.createElement('div');
+                successMsg.className = 'success-message';
+                successMsg.innerHTML = `
+                    <div class="success-content">
+                        <span class="success-icon">🎉</span>
+                        <h3>Improvement Committed!</h3>
+                        <p>Every small step compounds into extraordinary results. Keep going!</p>
+                        <div class="success-stats">
+                            <span>Today's improvements: <strong id="success-counter">${window.kaizenCounter.count + 1}</strong></span>
+                        </div>
+                    </div>
+                `;
+                
+                challengeEl.innerHTML = '';
+                challengeEl.appendChild(successMsg);
+                
+                // Increment counter
                 window.kaizenCounter.increment();
+                
+                // Show new challenge after 3 seconds
+                setTimeout(() => {
+                    challengeEl.classList.remove('success-animation');
+                    this.showChallenge();
+                }, 3000);
+            } else {
+                // Show error feedback
+                const textarea = document.getElementById('challenge-response');
+                if (textarea) {
+                    textarea.classList.add('error-shake');
+                    textarea.placeholder = 'Please share your improvement idea first!';
+                    setTimeout(() => {
+                        textarea.classList.remove('error-shake');
+                        textarea.placeholder = 'Describe your improvement idea or commit...';
+                    }, 2000);
+                }
             }
+        }
+
+        skipChallenge() {
+            this.showChallenge();
         }
     }
 
@@ -306,6 +438,14 @@
 
         submitChallenge() {
             this.challenge.submitChallenge();
+        }
+
+        skipChallenge() {
+            this.challenge.skipChallenge();
+        }
+
+        addQuickAction(text) {
+            this.challenge.addQuickAction(text);
         }
 
         setupTypewriter() {

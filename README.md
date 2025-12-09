@@ -4,6 +4,12 @@
 > Applying continuous improvement principles to AI development, testing, and reliability.  
 > *Quality, refined daily.*
 
+<div align="center">
+  <img src="favicon.svg" alt="Kaizen AI Favicon" width="32">
+  <br><br>
+  <img src="images/kaizen-spiral.svg" alt="Kaizen Spiral - Continuous Improvement" width="400">
+</div>
+
 ---
 
 ## Overview

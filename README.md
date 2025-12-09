@@ -1,4 +1,4 @@
-# Kaizen AI: The Art of Incremental Excellence
+# <img src="images/zen-garden-code.svg" alt="Zen Garden" width="40" style="vertical-align: middle; margin-right: 10px;"> Kaizen AI: The Art of Incremental Excellence
 
 > *"My mindset and life philosophy"*  
 > Applying continuous improvement principles to AI development, testing, and reliability.  
@@ -8,11 +8,6 @@
 
 **[View Live Site](https://ElaMCB.github.io/kaizen_AI/)** | **[Repository](https://github.com/ElaMCB/kaizen_AI)**
 
-<br>
-
-  <img src="favicon.svg" alt="Kaizen AI Favicon" width="32">
-  <br><br>
-  <img src="images/zen-garden-code.svg" alt="Zen Garden with Code Elements" width="600">
 </div>
 
 ---

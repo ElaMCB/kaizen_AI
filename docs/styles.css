@@ -1,0 +1,536 @@
+/* Kaizen AI - Minimalist, Quality-Focused Design */
+
+:root {
+    --color-primary: #2d5aa0;
+    --color-primary-dark: #1a4a7a;
+    --color-text: #1a1a1a;
+    --color-text-light: #4a4a4a;
+    --color-bg: #ffffff;
+    --color-bg-alt: #fafafa;
+    --color-border: #e0e0e0;
+    --color-accent: #909090;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+    --spacing-unit: 1rem;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    line-height: 1.7;
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+}
+
+.hero-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.subtitle {
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.refined {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.hero-image {
+    margin-top: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.alt-section {
+    background-color: var(--color-bg-alt);
+}
+
+.section h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: 3rem;
+    max-width: 900px;
+    line-height: 1.8;
+}
+
+/* Philosophy Section */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.philosophy-card {
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+}
+
+.philosophy-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.philosophy-card h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.philosophy-card p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.zen-garden-section {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.zen-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.core-principles {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border-left: 3px solid var(--color-primary);
+}
+
+.core-principles h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.principles-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.principles-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.principles-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.skill-category {
+    padding: 1.5rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 0.5rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.skill-category li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.differentiators {
+    margin-top: 4rem;
+}
+
+.diff-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.diff-item {
+    padding: 1.5rem;
+    background-color: var(--color-bg);
+    border-left: 3px solid var(--color-primary);
+}
+
+.diff-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.diff-item p {
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* Use Cases Section */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.use-case-card {
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.use-case-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.use-case-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.problem-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border-left: 3px solid var(--color-accent);
+}
+
+.problem-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.problem-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.problem-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.problem-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+/* Vision Section */
+.vision-content {
+    max-width: 900px;
+}
+
+.vision-question {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.vision-content p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.commitment,
+.fun-part {
+    padding: 1.5rem;
+    background-color: var(--color-bg);
+    border-left: 3px solid var(--color-primary);
+    margin: 2rem 0;
+}
+
+.tagline-large {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 3rem;
+    letter-spacing: 0.02em;
+}
+
+/* Repository Section */
+.repo-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.feature-item p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-text);
+    color: #e0e0e0;
+    padding: 4rem 0 3rem;
+    margin-top: 5rem;
+}
+
+.footer .quote {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-style: italic;
+}
+
+.footer-text {
+    text-align: center;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+}
+
+.applied-simply {
+    text-align: center;
+    color: #909090;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .philosophy-grid,
+    .skills-grid,
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+}

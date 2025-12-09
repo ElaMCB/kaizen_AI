@@ -6,6 +6,7 @@
     <title>Kaizen AI: The Art of Incremental Excellence</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <script src="kaizen-interactive.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -28,7 +29,27 @@
             <h1>Kaizen AI: The Art of Incremental Excellence</h1>
             <p class="tagline">"My mindset and life philosophy"</p>
             <p class="subtitle">Applying continuous improvement principles to AI development, testing, and reliability.</p>
-            <p class="refined">Quality, refined daily.</p>
+            <p class="refined" id="typewriter-text">Quality, refined daily.</p>
+            
+            <!-- Interactive Kaizen Widget -->
+            <div class="kaizen-widget">
+                <div class="widget-card">
+                    <h3>Your Kaizen Journey</h3>
+                    <div class="counter-display">
+                        <span class="counter-label">Today's Improvements:</span>
+                        <span class="counter-value" id="kaizen-counter">0</span>
+                    </div>
+                    <button id="add-improvement" class="improvement-btn">+ Make an Improvement</button>
+                    <p class="widget-hint">Every small improvement counts! Click to track your progress.</p>
+                </div>
+                
+                <div class="widget-card ai-suggestion-card">
+                    <h3>💡 AI Suggestion</h3>
+                    <p id="ai-suggestion" class="suggestion-text">Add one more test case to your test suite today</p>
+                    <button class="refresh-suggestion" onclick="window.kaizenApp.ai.currentIndex = 0; document.getElementById('ai-suggestion').textContent = window.kaizenApp.ai.getSuggestion();">Get New Idea</button>
+                </div>
+            </div>
+            
             <div class="hero-image">
                 <img src="images/zen-garden-code.svg" alt="Zen Garden with Code Elements" width="600">
             </div>
@@ -68,6 +89,47 @@
                     <li><strong>Rigorous validation</strong> to catch defects early and often</li>
                     <li><strong>Long-term metrics tracking</strong> for sustained performance</li>
                 </ul>
+            </div>
+            
+            <!-- Progress Metrics Visualization -->
+            <div class="metrics-section">
+                <h3>Continuous Improvement Metrics</h3>
+                <p class="metrics-intro">Watch quality improve over time—just like in real kaizen practice:</p>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Code Quality</span>
+                            <span class="metric-value" id="metric-quality">75%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-fill metric-quality" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">System Reliability</span>
+                            <span class="metric-value" id="metric-reliability">80%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-fill metric-reliability" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Development Efficiency</span>
+                            <span class="metric-value" id="metric-efficiency">70%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-fill metric-efficiency" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="metrics-note">💡 These metrics improve continuously—demonstrating kaizen in action!</p>
+            </div>
+            
+            <!-- Interactive Challenge Section -->
+            <div id="kaizen-challenge" class="challenge-section">
+                <!-- Challenge content will be dynamically inserted -->
             </div>
         </div>
     </section>

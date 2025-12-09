@@ -1,0 +1,70 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a4a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5aa0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle (subtle) -->
+  <circle cx="400" cy="400" r="350" fill="none" stroke="#f0f0f0" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Kaizen Spiral - multiple layers for depth -->
+  <path d="M 400 400 
+           A 50 50 0 0 1 450 400
+           A 100 100 0 0 1 400 500
+           A 150 150 0 0 1 250 500
+           A 200 200 0 0 1 200 300
+           A 250 250 0 0 1 450 300
+           A 300 300 0 0 1 400 600
+           A 320 320 0 0 1 80 400
+           A 340 340 0 0 1 400 80" 
+        fill="none" 
+        stroke="url(#spiralGradient)" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        filter="url(#shadow)"
+        opacity="0.9"/>
+  
+  <!-- Inner spiral accent -->
+  <path d="M 400 400 
+           A 30 30 0 0 1 430 400
+           A 60 60 0 0 1 400 460
+           A 90 90 0 0 1 310 460
+           A 120 120 0 0 1 280 340
+           A 150 150 0 0 1 430 340" 
+        fill="none" 
+        stroke="#2d5aa0" 
+        stroke-width="1.5" 
+        stroke-linecap="round"
+        opacity="0.6"/>
+  
+  <!-- Small improvement points along the spiral -->
+  <circle cx="450" cy="400" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="400" cy="500" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="250" cy="500" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="200" cy="300" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="450" cy="300" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="400" cy="600" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="80" cy="400" r="3" fill="#2d5aa0" opacity="0.8"/>
+  <circle cx="400" cy="80" r="3" fill="#2d5aa0" opacity="0.8"/>
+  
+  <!-- Center point -->
+  <circle cx="400" cy="400" r="5" fill="#1a1a1a"/>
+  <circle cx="400" cy="400" r="2" fill="#2d5aa0"/>
+  
+  <!-- Subtle text at bottom (optional, can be removed) -->
+  <text x="400" y="750" font-family="Arial, sans-serif" font-size="24" fill="#4a4a4a" text-anchor="middle" opacity="0.5" font-weight="300">Kaizen AI</text>
+</svg>

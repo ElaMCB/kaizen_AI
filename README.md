@@ -5,6 +5,11 @@
 > *Quality, refined daily.*
 
 <div align="center">
+
+**[View Live Site](https://ElaMCB.github.io/kaizen_AI/)** | **[Repository](https://github.com/ElaMCB/kaizen_AI)**
+
+<br>
+
   <img src="favicon.svg" alt="Kaizen AI Favicon" width="32">
   <br><br>
   <img src="images/zen-garden-code.svg" alt="Zen Garden with Code Elements" width="600">

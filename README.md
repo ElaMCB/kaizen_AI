@@ -7,7 +7,7 @@
 <div align="center">
   <img src="favicon.svg" alt="Kaizen AI Favicon" width="32">
   <br><br>
-  <img src="images/kaizen-spiral.svg" alt="Kaizen Spiral - Continuous Improvement" width="400">
+  <img src="images/zen-garden-code.svg" alt="Zen Garden with Code Elements" width="600">
 </div>
 
 ---

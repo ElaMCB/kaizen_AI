@@ -66,14 +66,12 @@ Inspired by **W. Edwards Deming's** revolutionary approach to quality management
 
 ### The System of Profound Knowledge
 
-| Principle | Core Concept | AI Application |
-|-----------|--------------|----------------|
-| **1. Appreciation for a System** | Systems are networks of interdependent components | Design entire AI systems for quality—data pipelines, training, deployment, monitoring—not just individual components |
-| **2. Knowledge of Variation** | Distinguish common cause (normal) vs special cause (signals) | Use statistical process control for AI metrics. Don't overreact to normal fluctuations; don't ignore meaningful changes |
-| **3. Theory of Knowledge** | Test hypotheses systematically with PDCA | Form hypotheses, test them, learn from results, act on knowledge. Every experiment teaches—if we have a theory to test |
-| **4. Psychology** | Quality comes from people working together | Build culture where failures are learning opportunities, data drives decisions, and quality is everyone's responsibility |
-
-**Key Practice**: Apply the **PDCA cycle** (Plan-Do-Check-Act) to every AI quality improvement—hypothesize, implement, measure, and standardize or adjust.
+| # | Principle | AI Practice |
+|---|-----------|-------------|
+| **1** | **Appreciation for a System** | Map dependencies. Design entire systems (data→training→deployment→monitoring) for quality, not just components |
+| **2** | **Knowledge of Variation** | Use statistical process control. Distinguish normal fluctuations from meaningful signals requiring action |
+| **3** | **Theory of Knowledge** | Apply PDCA: Form hypotheses → Test systematically → Learn from results → Act on knowledge |
+| **4** | **Psychology** | Build culture: Failures = learning, data drives decisions, experiments encouraged, quality = everyone's responsibility |
 
 ### The PDCA Cycle
 

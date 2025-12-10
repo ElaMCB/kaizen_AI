@@ -320,25 +320,75 @@
 
             <div class="deming-points">
                 <h3>Why Deming Matters for AI</h3>
-                <p>Deming transformed quality by shifting focus from <strong>inspection</strong> (finding defects) to <strong>prevention</strong> (building quality in). In AI, this means:</p>
-                <div class="diff-list">
-                    <div class="diff-item">
-                        <strong>Not:</strong> Testing models after training to find failures
-                        <p><strong>But:</strong> Designing training, validation, and deployment systems that prevent failures</p>
+                <p class="deming-intro">Deming transformed quality by shifting focus from <strong>inspection</strong> (finding defects) to <strong>prevention</strong> (building quality in). In AI, this means:</p>
+                
+                <div class="deming-comparison-grid">
+                    <div class="comparison-card old-way">
+                        <div class="comparison-header">
+                            <span class="comparison-icon">❌</span>
+                            <h4>Old Way</h4>
+                        </div>
+                        <div class="comparison-content">
+                            <div class="comparison-item">
+                                <span class="item-badge">Inspection</span>
+                                <p>Testing models after training to find failures</p>
+                            </div>
+                            <div class="comparison-item">
+                                <span class="item-badge">Reactive</span>
+                                <p>Reacting to production incidents</p>
+                            </div>
+                            <div class="comparison-item">
+                                <span class="item-badge">Blame</span>
+                                <p>Blaming models or data when things go wrong</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="diff-item">
-                        <strong>Not:</strong> Reacting to production incidents
-                        <p><strong>But:</strong> Building monitoring and feedback loops that enable continuous improvement</p>
+
+                    <div class="comparison-arrow">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#2d5aa0;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 10 50 L 70 50 M 60 40 L 70 50 L 60 60" stroke="url(#arrowGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="80" cy="50" r="8" fill="url(#arrowGradient)" opacity="0.3">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                        <span class="arrow-text">Transform</span>
                     </div>
-                    <div class="diff-item">
-                        <strong>Not:</strong> Blaming models or data when things go wrong
-                        <p><strong>But:</strong> Understanding the system that produced the outcome and improving it</p>
+
+                    <div class="comparison-card new-way">
+                        <div class="comparison-header">
+                            <span class="comparison-icon">✅</span>
+                            <h4>New Way</h4>
+                        </div>
+                        <div class="comparison-content">
+                            <div class="comparison-item">
+                                <span class="item-badge success">Prevention</span>
+                                <p>Designing training, validation, and deployment systems that prevent failures</p>
+                            </div>
+                            <div class="comparison-item">
+                                <span class="item-badge success">Proactive</span>
+                                <p>Building monitoring and feedback loops that enable continuous improvement</p>
+                            </div>
+                            <div class="comparison-item">
+                                <span class="item-badge success">System Thinking</span>
+                                <p>Understanding the system that produced the outcome and improving it</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="tagline-large" style="margin-top: 2em;">
-                    <em>Quality is not a destination, it's a journey.</em> Every day, every iteration, every deployment is an opportunity to improve. 
-                    This is kaizen. This is Deming. This is how we build AI systems that earn trust.
-                </p>
+
+                <div class="deming-quote-box">
+                    <div class="quote-icon">∞</div>
+                    <p class="quote-text">
+                        <em>Quality is not a destination, it's a journey.</em> Every day, every iteration, every deployment is an opportunity to improve. 
+                        This is kaizen. This is Deming. This is how we build AI systems that earn trust.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

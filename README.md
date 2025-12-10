@@ -16,6 +16,8 @@
 
 This repository explores practical ways to embed **kaizen**—the philosophy of ongoing, incremental refinement—into AI engineering workflows. The focus is on building higher-quality AI systems through meticulous testing, iterative enhancements, and measurable reliability gains.
 
+Inspired by **W. Edwards Deming's** System of Profound Knowledge and his transformative approach to quality management, this work applies his principles—statistical thinking, systems understanding, and continuous improvement—to the unique challenges of AI development.
+
 ---
 
 ## Why This Matters: The Unique Intersection
@@ -53,6 +55,154 @@ This approach draws from proven quality practices, adapted for modern AI challen
 **The principle**: Quality is invisible when done well. It reveals itself not in grand gestures, but in the absence of failures, in the confidence of deployment, in the trust of those who depend on your work.
 
 *Applied simply: Build with care. Test with rigor. Improve continuously. The rest follows.*
+
+---
+
+## Deming's Legacy: Quality Through Systems Thinking
+
+> *"In God we trust. All others must bring data."* — W. Edwards Deming
+
+This project is deeply influenced by **W. Edwards Deming's** revolutionary approach to quality management, which transformed manufacturing and can transform AI development. Deming taught that quality comes from understanding systems, not from inspection after the fact.
+
+### The System of Profound Knowledge Applied to AI
+
+Deming's framework provides four essential lenses for building quality AI systems:
+
+#### 1. **Appreciation for a System**
+*"A system is a network of interdependent components that work together to accomplish the aim of the system."*
+
+**In AI**: Every model is part of a larger system—data pipelines, training infrastructure, deployment environments, monitoring systems, and user experiences. Quality failures are rarely isolated; they emerge from system interactions. We must design the entire system for quality, not just optimize individual components.
+
+**Practice**: Map your AI system's dependencies. Understand how data quality affects model performance, how deployment infrastructure affects reliability, how monitoring affects trust. Build quality into the system architecture, not as an afterthought.
+
+#### 2. **Knowledge of Variation**
+*"Variation exists in all processes. Understanding variation is the key to improvement."*
+
+**In AI**: Model outputs vary. Training runs produce different results. Data distributions shift. Performance metrics fluctuate. Deming distinguished between **common cause variation** (inherent to the process) and **special cause variation** (signals of change requiring action).
+
+**Practice**: Use statistical process control for AI metrics. Establish control charts for model performance, inference latency, error rates. Distinguish between expected variation and signals that require intervention. Don't overreact to normal fluctuations; don't ignore meaningful changes.
+
+#### 3. **Theory of Knowledge**
+*"Without theory, experience has no meaning. Without theory, one has no questions to ask."*
+
+**In AI**: Every experiment, every test, every deployment teaches us something—if we have a theory to test. Deming emphasized the Plan-Do-Check-Act (PDCA) cycle: form hypotheses, test them systematically, learn from results, and act on that knowledge.
+
+**Practice**: Apply PDCA to AI development:
+- **Plan**: Hypothesize how a change will improve quality (e.g., "Adding this validation will reduce production errors by 20%")
+- **Do**: Implement the change in a controlled way
+- **Check**: Measure the actual impact with data
+- **Act**: Standardize what works, adjust what doesn't, and begin the cycle again
+
+#### 4. **Psychology**
+*"People are different from one another. A manager must be aware of these differences and use them for optimization of everybody's abilities and inclinations."*
+
+**In AI**: Quality comes from people working together effectively. Fear of failure leads to hiding problems. Blame culture prevents learning. Deming's 14 Points emphasize removing barriers, eliminating fear, and creating an environment where continuous improvement is possible.
+
+**Practice**: Build a culture where:
+- Failures are learning opportunities, not blame events
+- Data drives decisions, not opinions
+- Small experiments are encouraged, not punished
+- Quality is everyone's responsibility, not just QA's
+
+### The PDCA Cycle in AI Quality
+
+Deming's Plan-Do-Check-Act cycle is the engine of continuous improvement:
+
+```
+┌─────────────────────────────────────────┐
+│  PLAN: Design quality improvements      │
+│  - What quality problem are we solving? │
+│  - What change will address it?         │
+│  - How will we measure success?         │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  DO: Implement the change                │
+│  - Deploy new validation/test            │
+│  - Update monitoring/metrics             │
+│  - Run in controlled environment         │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  CHECK: Measure the results              │
+│  - Did quality improve?                  │
+│  - What did we learn?                    │
+│  - What unexpected effects occurred?     │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  ACT: Standardize or adjust              │
+│  - If successful: make it standard      │
+│  - If not: adjust and try again         │
+│  - Document learnings                    │
+└──────────────┬──────────────────────────┘
+               │
+               └──► (Cycle repeats)
+```
+
+### Deming's 14 Points for AI Development
+
+Adapted for modern AI engineering:
+
+1. **Create constancy of purpose** toward improvement of product and service
+   - *AI translation*: Long-term commitment to quality, not just shipping features
+
+2. **Adopt the new philosophy** of quality
+   - *AI translation*: Quality is built in, not tested in
+
+3. **Cease dependence on inspection** to achieve quality
+   - *AI translation*: Automated testing and validation prevent defects, don't just find them
+
+4. **End the practice of awarding business on price alone**
+   - *AI translation*: Choose tools and practices that enable quality, not just speed
+
+5. **Improve constantly and forever** the system of production
+   - *AI translation*: Continuous improvement of models, pipelines, and processes
+
+6. **Institute training on the job**
+   - *AI translation*: Build team capability in quality practices and AI reliability
+
+7. **Institute leadership**
+   - *AI translation*: Leaders must understand quality systems, not just manage people
+
+8. **Drive out fear**
+   - *AI translation*: Create psychological safety for experimentation and learning
+
+9. **Break down barriers** between departments
+   - *AI translation*: Data science, engineering, and QA must collaborate
+
+10. **Eliminate slogans, exhortations, and targets**
+    - *AI translation*: Focus on system improvements, not motivational posters
+
+11. **Eliminate numerical quotas**
+    - *AI translation*: Focus on quality metrics, not arbitrary velocity targets
+
+12. **Remove barriers** that rob people of pride of workmanship
+    - *AI translation*: Give teams time and tools to build quality systems
+
+13. **Institute a vigorous program of education and self-improvement**
+    - *AI translation*: Continuous learning in AI quality practices
+
+14. **Put everybody in the company to work** to accomplish the transformation
+    - *AI translation*: Quality is everyone's responsibility, from data collection to deployment
+
+### Why Deming Matters for AI
+
+Deming transformed quality by shifting focus from **inspection** (finding defects) to **prevention** (building quality in). In AI, this means:
+
+- **Not**: Testing models after training to find failures
+- **But**: Designing training, validation, and deployment systems that prevent failures
+
+- **Not**: Reacting to production incidents
+- **But**: Building monitoring and feedback loops that enable continuous improvement
+
+- **Not**: Blaming models or data when things go wrong
+- **But**: Understanding the system that produced the outcome and improving it
+
+Deming's insight: **Quality is not a destination, it's a journey.** Every day, every iteration, every deployment is an opportunity to improve. This is kaizen. This is Deming. This is how we build AI systems that earn trust.
 
 ---
 
@@ -161,9 +311,13 @@ Suggestions for kaizen-style improvements are welcome—open issues or PRs with 
 
 ---
 
-## Philosophy Quote
+## Philosophy Quotes
 
 > **"Quality is a habit, not an event."**
+
+> **"It is not enough to do your best; you must know what to do, and then do your best."** — W. Edwards Deming
+
+> **"In God we trust. All others must bring data."** — W. Edwards Deming
 
 ---
 

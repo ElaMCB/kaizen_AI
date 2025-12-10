@@ -1016,7 +1016,7 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
     border-radius: 20px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .pdca-section::before {
@@ -1060,6 +1060,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 0;
+    overflow: visible;
 }
 
 .pdca-cycle-wrapper {
@@ -1067,6 +1068,8 @@ body {
     width: 100%;
     height: 600px;
     margin: 0 auto;
+    overflow: visible;
+    padding: 20px;
 }
 
 .pdca-connections {
@@ -1128,7 +1131,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     backdrop-filter: blur(10px);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .pdca-step::before {
@@ -1241,20 +1244,21 @@ body {
 
 .pdca-number {
     position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 36px;
-    height: 36px;
+    top: -8px;
+    right: -8px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(45, 90, 160, 0.3);
-    border: 2px solid white;
+    border: 3px solid white;
+    z-index: 10;
 }
 
 .pdca-do .pdca-number {
